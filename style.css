@@ -1,0 +1,385 @@
+body{
+  background-color: rgb(254, 239, 250);
+  color: blueviolet;
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+h1{
+
+  color: brown;
+}
+
+h3{
+  color: aqua;
+}
+
+img {
+ 
+  width: 200px;
+  height: auto;
+}
+
+main {
+  margin-bottom: 40px; /* Igual a la altura del footer */
+}
+
+
+footer{
+  background-color: #f0f0f0; 
+
+  text-align: center;
+  margin-top: 2%;
+  position: relative;
+  bottom: 0;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  
+}
+
+.logo {
+  display: inline-block;
+  width: 30%;
+  margin: 1%;
+  padding: 0;
+}
+.icono-derecha {
+  align-self: flex-end;
+
+
+}
+
+ 
+
+.card{
+background-color: rgb(222, 226, 245);
+margin: 3%;
+border-radius: 5%;
+
+
+}
+
+.card-contenido{
+  background-color:white;
+  width: 90%;
+  border-radius: 5%;
+  margin: 2%;
+  margin-bottom: 20%;
+  
+}
+
+
+/* Estilo para la lista de paginación */
+nav {
+  background-color: rgb(44, 49, 52);
+  color: rgb(91, 177, 247);
+  text-align: center; /* Alinea el contenido del navbar al centro */
+  overflow: hidden; /* Añadir clearfix para limpiar el float de la imagen */
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Add this line */
+}
+
+/* Estilo para los elementos de la lista de paginación */
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+
+/* Cambiar el color del texto en el navbar a negro */
+nav ul li a {
+  color: rgb(197, 231, 251);
+  text-decoration: none; /* Quitar decoración de subrayado de los enlaces */
+}
+
+
+/* Estilo hover para los elementos de navegación */
+nav a:hover {
+  color: rgb(103, 196, 247); /* Cambia el color del texto al pasar el mouse */
+}
+
+/* Estilo para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .logo {
+      width: 20%; /* Hacer que la imagen ocupe el ancho completo en pantallas pequeñas */
+      margin-right: 0;
+  }
+
+  nav ul {
+      display: block; /* Cambiar a bloque para que los elementos estén uno debajo del otro */
+      margin: 0; /* Eliminar el margen en pantallas pequeñas */
+      text-align: center; /* Centrar el contenido de la lista */
+  }
+
+  nav ul li {
+      display: block; /* Cambiar a bloque para que los elementos estén uno debajo del otro */
+      margin-right: 0; /* Eliminar el margen entre elementos */
+      margin-bottom: 10px; /* Agregar espacio entre elementos apilados */
+  }
+}
+
+
+.entrada{
+  text-align: center;
+  margin-top: 5%;
+  
+
+}
+
+.titulo-pag{
+color: rgb(18, 97, 158);
+}
+
+
+
+
+.calificacion {
+  font-size: 24px; /* Tamaño de las estrellas */
+}
+
+.estrella {
+  color: gold; /* Color de las estrellas llenas */
+}
+
+
+/* bootstrap*/
+/* Cambiar el color de fondo y el color del icono del botón de control previo */
+.carousel-control-prev {
+  background-color: black; /* Cambia el color de fondo */
+  color: white; /* Cambia el color del icono */
+}
+
+/* Cambiar el color de fondo y el color del icono del botón de control siguiente */
+.carousel-control-next {
+  background-color: black; /* Cambia el color de fondo */
+  color: white; /* Cambia el color del icono */
+}
+
+.carousel{
+  width: 100%;
+  height: 70%;
+ 
+
+}
+
+.carrusel-top{
+  max-width: 800px; /* Cambia este valor según tus necesidades */
+  margin: 0 auto; /* Centra la sección horizontalmente */
+
+
+}
+
+.ribbon {
+  margin-bottom: 5%;
+  border-radius: 40%;
+  border-bottom: 3px solid rgb(138, 191, 232);
+  
+}
+
+
+.fondo-sec{
+
+
+  text-align: center;
+  background-color: rgb(83, 84, 85);
+  padding: 1%; 
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.contenedor-titulo {
+  display: flex;
+  align-items: center; /* Alinea los elementos hijos en el centro */
+  margin-top: 3%;
+  margin-bottom: 1%;
+}
+
+.formaDos {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 20px solid lightblue;
+  border-bottom: 10px solid transparent;
+  margin-right: 10px; /* Añadir margen a la derecha para separar del título */
+}
+
+.formaTres{
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-right: 40px solid lightblue;
+  border-bottom: 20px solid transparent;
+  margin-right: 10px; /* Añadir margen a la derecha para separar del título */
+}
+
+.forma-container {
+  display: flex;
+  justify-content: center;
+}
+
+.formaCuatro {
+  width: 0;
+   height: 0;
+   border-top: 20px solid transparent;
+   border-left: 40px solid lightblue;
+   border-bottom: 20px solid transparent;
+}
+
+
+
+.formaDos:hover {
+  filter: saturate(180%);
+}
+
+.formaTres:hover {
+  filter: saturate(180%);
+}
+
+.formaCuatro:hover {
+  filter: saturate(180%);
+}
+
+.titulo-top {
+  margin: 1%;
+  color: rgb(4, 29, 49);
+}
+
+
+.container-dia {
+  justify-content: center; /* Esto centrará horizontalmente */
+  align-items: center; /* Esto centrará verticalmente */
+  
+  margin-left: 10%; /* Espacio en el lado izquierdo */
+  margin-right: 10%; /* Espacio en el lado derecho */
+  overflow: hidden; /* Para limpiar el float */
+}
+
+.imagen {
+  float: left; /* Coloca la imagen a la izquierda */
+  margin-right: 5%; /* Agrega una pequeña separación a la derecha de la imagen */
+  border-radius: 2%;
+  
+
+}
+
+.imagen:hover {
+  filter: saturate(180%);
+}
+
+
+.texto {
+  overflow: hidden; /* Para limpiar el float */
+}
+
+
+.maquina-de-escribir {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: escribir 4s steps(35, end) 1s normal both;
+  border-right: 2px solid transparent;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes escribir {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.contenedor-citas{
+  text-align: center;
+}
+
+.centrar-texto blockquote {
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto;
+  max-width: 100%; /* El bloque se ajustará al ancho máximo de su contenedor */
+  padding: 0 20px; /* Agrega espacio en los lados para mejorar la legibilidad */
+}
+
+
+form {
+  display: flex;
+  justify-content: center;
+
+  width: 100%; /* Cambiado el ancho al 100% para que ocupe todo el ancho del contenedor padre */
+
+}
+
+.contenedor-interior {
+  padding: 2%;
+  margin: 2%;
+  background-color: rgb(242, 242, 242);
+  width: 100%;
+  max-width: 700px; /* Cambiado para limitar el ancho máximo del formulario */
+  border-radius: 1%;
+  font-weight: bold;
+  border: 2px dashed #94d8f8; 
+}
+
+.contenedor-interior:hover {
+  border-color: #058aba; /* Cambia el color del borde al señalar (hover) */
+}
+
+
+.contendor-datos{
+  margin-left: 3%;
+  margin-right: 3%;
+  padding: 3%;
+  background-color: rgb(242, 242, 242);
+
+  font-weight: bold;
+  border: 2px dashed #94d8f8; 
+  
+}
+
+
+
+/* Estilo para el botón */
+.btn-modificado {
+  width: 100%; /* Para que el botón ocupe todo el ancho */
+  
+}
+
+.previo{
+  align-items: center;
+  justify-content: center
+}
+
+.formaUnaPrevio{
+  width: 10px;
+  height: 10px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #5cb85c;
+  margin: 3px;
+}
+
+.formaDosPrevio {  align-items: center;
+  width: 10px;
+  height: 10px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #5cb85c;
+  margin: 3px;
+}
+
+.formaUnaPrevio:hover {
+  filter: saturate(180%);
+}
+
+.formaDosPrevio:hover {
+  filter: saturate(180%);
+}
