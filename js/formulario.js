@@ -17,9 +17,11 @@ document.addEventListener("DOMContentLoaded", function () {
       data: JSON.stringify({ termino: termino }), // Convierte los datos a una cadena JSON
       success: function (response) {
         var datosDiv = document.getElementById("datos");
+        var datosDiv2 = document.getElementById("datos2");
 
         // Limpiar el contenido actual del div
         datosDiv.innerHTML = "";
+        datosDiv2.innerHTML = "";
 
         // Agregar los resultados de la búsqueda al div
         response.results.forEach(function (resultado) {
@@ -37,6 +39,35 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       },
     });
+
+ // Enviar los datos al servidor para el segundo conjunto de resultados
+ $.ajax({
+  url: "http://127.0.0.1:5000/casos",
+  type: "POST",
+  contentType: "application/json", // Especifica el tipo de medio de los datos
+  data: JSON.stringify({ termino: termino }), // Convierte los datos a una cadena JSON
+  success: function (response) {
+    var datosDiv2 = document.getElementById("datos2");
+
+    // Limpiar el contenido actual del div
+    datosDiv2.innerHTML = "";
+
+    // Agregar los resultados de la búsqueda al div
+    response.results2.forEach(function (resultado2) {
+      var resultadoDiv2 = document.createElement("div");
+      resultadoDiv2.innerHTML = `
+        <div class="contenedor-titulo">
+        <div class="formaDos"></div>
+        <h2>${resultado2.title}</h2>
+        </div>
+
+        <a href="${resultado2.url}">${resultado2.url}</a>
+        <p>${resultado2.description}</p>
+      `;
+      datosDiv2.appendChild(resultadoDiv2);
+    });
+  },
+});
 
     // Limpiar el formulario
     formulario.reset();

@@ -1,21 +1,18 @@
-body{
+body {
   background-color: rgb(254, 239, 250);
   color: blueviolet;
-  font-family: 'Roboto', sans-serif;
-  
+  font-family: "Roboto", sans-serif;
 }
 
-h1{
-
+h1 {
   color: brown;
 }
 
-h3{
+h3 {
   color: aqua;
 }
 
 img {
- 
   width: 200px;
   height: auto;
 }
@@ -24,9 +21,8 @@ main {
   margin-bottom: 40px; /* Igual a la altura del footer */
 }
 
-
-footer{
-  background-color: #f0f0f0; 
+footer {
+  background-color: #f0f0f0;
 
   text-align: center;
   margin-top: 2%;
@@ -34,7 +30,6 @@ footer{
   bottom: 0;
   padding-top: 2%;
   padding-bottom: 2%;
-  
 }
 
 .logo {
@@ -45,29 +40,21 @@ footer{
 }
 .icono-derecha {
   align-self: flex-end;
-
-
 }
 
- 
-
-.card{
-background-color: rgb(222, 226, 245);
-margin: 3%;
-border-radius: 5%;
-
-
+.card {
+  background-color: rgb(222, 226, 245);
+  margin: 3%;
+  border-radius: 5%;
 }
 
-.card-contenido{
-  background-color:white;
+.card-contenido {
+  background-color: white;
   width: 90%;
   border-radius: 5%;
   margin: 2%;
   margin-bottom: 20%;
-  
 }
-
 
 /* Estilo para la lista de paginación */
 nav {
@@ -89,13 +76,11 @@ nav ul li {
   margin-right: 20px;
 }
 
-
 /* Cambiar el color del texto en el navbar a negro */
 nav ul li a {
   color: rgb(197, 231, 251);
   text-decoration: none; /* Quitar decoración de subrayado de los enlaces */
 }
-
 
 /* Estilo hover para los elementos de navegación */
 nav a:hover {
@@ -105,37 +90,31 @@ nav a:hover {
 /* Estilo para pantallas más pequeñas */
 @media (max-width: 768px) {
   .logo {
-      width: 20%; /* Hacer que la imagen ocupe el ancho completo en pantallas pequeñas */
-      margin-right: 0;
+    width: 20%; /* Hacer que la imagen ocupe el ancho completo en pantallas pequeñas */
+    margin-right: 0;
   }
 
   nav ul {
-      display: block; /* Cambiar a bloque para que los elementos estén uno debajo del otro */
-      margin: 0; /* Eliminar el margen en pantallas pequeñas */
-      text-align: center; /* Centrar el contenido de la lista */
+    display: block; /* Cambiar a bloque para que los elementos estén uno debajo del otro */
+    margin: 0; /* Eliminar el margen en pantallas pequeñas */
+    text-align: center; /* Centrar el contenido de la lista */
   }
 
   nav ul li {
-      display: block; /* Cambiar a bloque para que los elementos estén uno debajo del otro */
-      margin-right: 0; /* Eliminar el margen entre elementos */
-      margin-bottom: 10px; /* Agregar espacio entre elementos apilados */
+    display: block; /* Cambiar a bloque para que los elementos estén uno debajo del otro */
+    margin-right: 0; /* Eliminar el margen entre elementos */
+    margin-bottom: 10px; /* Agregar espacio entre elementos apilados */
   }
 }
 
-
-.entrada{
+.entrada {
   text-align: center;
   margin-top: 5%;
-  
-
 }
 
-.titulo-pag{
-color: rgb(18, 97, 158);
+.titulo-pag {
+  color: rgb(18, 97, 158);
 }
-
-
-
 
 .calificacion {
   font-size: 24px; /* Tamaño de las estrellas */
@@ -144,7 +123,6 @@ color: rgb(18, 97, 158);
 .estrella {
   color: gold; /* Color de las estrellas llenas */
 }
-
 
 /* bootstrap*/
 /* Cambiar el color de fondo y el color del icono del botón de control previo */
@@ -159,34 +137,26 @@ color: rgb(18, 97, 158);
   color: white; /* Cambia el color del icono */
 }
 
-.carousel{
+.carousel {
   width: 100%;
   height: 70%;
- 
-
 }
 
-.carrusel-top{
+.carrusel-top {
   max-width: 800px; /* Cambia este valor según tus necesidades */
   margin: 0 auto; /* Centra la sección horizontalmente */
-
-
 }
 
 .ribbon {
   margin-bottom: 5%;
   border-radius: 40%;
   border-bottom: 3px solid rgb(138, 191, 232);
-  
 }
 
-
-.fondo-sec{
-
-
+.fondo-sec {
   text-align: center;
   background-color: rgb(83, 84, 85);
-  padding: 1%; 
+  padding: 1%;
   margin-top: 5%;
   margin-bottom: 5%;
 }
@@ -207,7 +177,7 @@ color: rgb(18, 97, 158);
   margin-right: 10px; /* Añadir margen a la derecha para separar del título */
 }
 
-.formaTres{
+.formaTres {
   width: 0;
   height: 0;
   border-top: 20px solid transparent;
@@ -223,13 +193,11 @@ color: rgb(18, 97, 158);
 
 .formaCuatro {
   width: 0;
-   height: 0;
-   border-top: 20px solid transparent;
-   border-left: 40px solid lightblue;
-   border-bottom: 20px solid transparent;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-left: 40px solid lightblue;
+  border-bottom: 20px solid transparent;
 }
-
-
 
 .formaDos:hover {
   filter: saturate(180%);
@@ -247,12 +215,39 @@ color: rgb(18, 97, 158);
   margin: 1%;
   color: rgb(4, 29, 49);
 }
+.titulo-sec {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-right: 30%;
+  background-color: rgba(3, 33, 64, 0.482);
+  border-top-right-radius: 20px; /* Redondea la esquina superior derecha */
+  border-bottom-right-radius: 20px; /* Redondea la esquina inferior derecha */
+  color: rgb(254, 254, 254);
+  padding-left: 30px; /* Ajusta el espaciado del texto hacia la izquierda */
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-align: center; /* Alinea el texto a la derecha */
+}
 
+.titulo-sec2 {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 30%;
+  background-color: rgba(3, 33, 64, 0.482);
+  border-top-left-radius: 20px; /* Redondea la esquina superior derecha */
+  border-bottom-left-radius: 20px; /* Redondea la esquina inferior derecha */
+  color: rgb(254, 254, 254);
+  padding-right: 30px; /* Ajusta el espaciado del texto hacia la izquierda */
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-align: center; /* Alinea el texto a la derecha */
+
+}
 
 .container-dia {
   justify-content: center; /* Esto centrará horizontalmente */
   align-items: center; /* Esto centrará verticalmente */
-  
+
   margin-left: 10%; /* Espacio en el lado izquierdo */
   margin-right: 10%; /* Espacio en el lado derecho */
   overflow: hidden; /* Para limpiar el float */
@@ -262,19 +257,15 @@ color: rgb(18, 97, 158);
   float: left; /* Coloca la imagen a la izquierda */
   margin-right: 5%; /* Agrega una pequeña separación a la derecha de la imagen */
   border-radius: 2%;
-  
-
 }
 
 .imagen:hover {
   filter: saturate(180%);
 }
 
-
 .texto {
   overflow: hidden; /* Para limpiar el float */
 }
-
 
 .maquina-de-escribir {
   white-space: nowrap;
@@ -295,7 +286,7 @@ color: rgb(18, 97, 158);
   }
 }
 
-.contenedor-citas{
+.contenedor-citas {
   text-align: center;
 }
 
@@ -307,13 +298,11 @@ color: rgb(18, 97, 158);
   padding: 0 20px; /* Agrega espacio en los lados para mejorar la legibilidad */
 }
 
-
 form {
   display: flex;
   justify-content: center;
 
   width: 100%; /* Cambiado el ancho al 100% para que ocupe todo el ancho del contenedor padre */
-
 }
 
 .contenedor-interior {
@@ -324,39 +313,34 @@ form {
   max-width: 700px; /* Cambiado para limitar el ancho máximo del formulario */
   border-radius: 1%;
   font-weight: bold;
-  border: 2px dashed #94d8f8; 
+  border: 2px dashed #94d8f8;
 }
 
 .contenedor-interior:hover {
   border-color: #058aba; /* Cambia el color del borde al señalar (hover) */
 }
 
-
-.contendor-datos{
+.contendor-datos {
   margin-left: 3%;
   margin-right: 3%;
   padding: 3%;
   background-color: rgb(242, 242, 242);
 
   font-weight: bold;
-  border: 2px dashed #94d8f8; 
-  
+  border: 2px dashed #94d8f8;
 }
-
-
 
 /* Estilo para el botón */
 .btn-modificado {
   width: 100%; /* Para que el botón ocupe todo el ancho */
-  
 }
 
-.previo{
+.previo {
   align-items: center;
-  justify-content: center
+  justify-content: center;
 }
 
-.formaUnaPrevio{
+.formaUnaPrevio {
   width: 10px;
   height: 10px;
   -moz-border-radius: 50%;
@@ -366,7 +350,8 @@ form {
   margin: 3px;
 }
 
-.formaDosPrevio {  align-items: center;
+.formaDosPrevio {
+  align-items: center;
   width: 10px;
   height: 10px;
   -moz-border-radius: 50%;

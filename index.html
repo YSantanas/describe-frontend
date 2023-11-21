@@ -53,7 +53,7 @@
 
 
     <div class="entrada ribbon">
-      <h1 class="titulo-pag">Describe - Español</h3>
+      <h1 class="titulo-pag">Describe - Español</h1>
     </div>
 
     <div class="contenedor-citas">
@@ -99,10 +99,16 @@
 
     </section>
 
-
+    <h1 id="tituloDatos"></h1>
     <div class="contendor-datos" id="datos" style="display: none;">
+      <!-- Contenido de datos 1 -->
     </div>
 
+    <h1 id="tituloDatos2"></h1>
+    <div class="contendor-datos" id="datos2" style="display: none;">
+      
+      <!-- Contenido de datos 2 -->
+    </div>
 
   </main>
 
@@ -115,8 +121,17 @@
 
   <script src="../frontend/js/formulario.js"></script>
   <script>
-    document.getElementById('miFormulario').addEventListener('submit', function () {
-      document.getElementById('datos').style.display = 'block';
+    document.getElementById('miFormulario').addEventListener('submit', function (event) {
+      event.preventDefault(); // Evita el envío por defecto del formulario
+
+      document.getElementById('datos').style.display = 'block'; // Muestra datos 1
+      document.getElementById('tituloDatos').innerText = 'Definiciones'; // Modifica el título datos 1
+      document.getElementById('tituloDatos').classList.add('titulo-sec'); // Agrega la clase 'titulo-sec-active'
+
+      document.getElementById('datos2').style.display = 'block'; // Muestra datos 2
+      document.getElementById('tituloDatos2').innerText = 'Uso'; // Modifica el título datos 2
+      document.getElementById('tituloDatos2').classList.add('titulo-sec2'); // Agrega la clase 'titulo-sec-active'
+
     });
   </script>
 
