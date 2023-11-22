@@ -23,17 +23,21 @@ document.addEventListener("DOMContentLoaded", function () {
         datosDiv.innerHTML = "";
         datosDiv2.innerHTML = "";
 
+        function truncate(str, maxlength) {
+          return (str.length > maxlength) ?
+            str.slice(0, maxlength - 1) + '…' : str;
+         }
+
         // Agregar los resultados de la búsqueda al div
         response.results.forEach(function (resultado) {
           var resultadoDiv = document.createElement("div");
           resultadoDiv.innerHTML = `
             <div class="contenedor-titulo">
             <div class="formaDos"></div>
-            <h2>${resultado.title}</h2>
-            </div>
 
-            <a href="${resultado.url}">${resultado.url}</a>
-            <p>${resultado.description}</p>
+            <a href="${resultado.url}">${truncate(resultado.description.replace("Web", ""), 100)}</a>
+            </div>
+            
           `;
           datosDiv.appendChild(resultadoDiv);
         });
@@ -52,22 +56,57 @@ document.addEventListener("DOMContentLoaded", function () {
     // Limpiar el contenido actual del div
     datosDiv2.innerHTML = "";
 
+    function truncate(str, maxlength) {
+      return (str.length > maxlength) ?
+        str.slice(0, maxlength - 1) + '…' : str;
+     }
+
     // Agregar los resultados de la búsqueda al div
     response.results2.forEach(function (resultado2) {
       var resultadoDiv2 = document.createElement("div");
       resultadoDiv2.innerHTML = `
         <div class="contenedor-titulo">
         <div class="formaDos"></div>
-        <h2>${resultado2.title}</h2>
+        <a href="${resultado2.url}">${truncate(resultado2.description.replace("Web", ""), 100)}</a>
         </div>
-
-        <a href="${resultado2.url}">${resultado2.url}</a>
-        <p>${resultado2.description}</p>
       `;
       datosDiv2.appendChild(resultadoDiv2);
     });
   },
 });
+
+
+ // Enviar los datos al servidor para el segundo conjunto de resultados
+ $.ajax({
+  url: "http://127.0.0.1:5000/funcion",
+  type: "POST",
+  contentType: "application/json", // Especifica el tipo de medio de los datos
+  data: JSON.stringify({ termino: termino }), // Convierte los datos a una cadena JSON
+  success: function (response) {
+    var datosDiv3 = document.getElementById("datos3");
+
+    // Limpiar el contenido actual del div
+    datosDiv3.innerHTML = "";
+
+    function truncate(str, maxlength) {
+      return (str.length > maxlength) ?
+        str.slice(0, maxlength - 1) + '…' : str;
+     }
+
+    // Agregar los resultados de la búsqueda al div
+    response.results3.forEach(function (resultado3) {
+      var resultadoDiv3 = document.createElement("div");
+      resultadoDiv3.innerHTML = `
+        <div class="contenedor-titulo">
+        <div class="formaDos"></div>
+        <a href="${resultado3.url}">${truncate(resultado3.description.replace("Web", ""), 100)}</a>
+        </div>
+      `;
+      datosDiv3.appendChild(resultadoDiv3);
+    });
+  },
+});
+
 
     // Limpiar el formulario
     formulario.reset();

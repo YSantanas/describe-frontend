@@ -110,6 +110,12 @@
       <!-- Contenido de datos 2 -->
     </div>
 
+    <h1 id="tituloDatos3"></h1>
+    <div class="contendor-datos" id="datos3" style="display: none;">
+      <!-- Contenido de datos 1 -->
+    </div>
+
+
   </main>
 
   <footer>
@@ -123,15 +129,20 @@
   <script>
     document.getElementById('miFormulario').addEventListener('submit', function (event) {
       event.preventDefault(); // Evita el envío por defecto del formulario
-
+      //Definiciones
       document.getElementById('datos').style.display = 'block'; // Muestra datos 1
       document.getElementById('tituloDatos').innerText = 'Definiciones'; // Modifica el título datos 1
       document.getElementById('tituloDatos').classList.add('titulo-sec'); // Agrega la clase 'titulo-sec-active'
 
+      //Partes y componentes
       document.getElementById('datos2').style.display = 'block'; // Muestra datos 2
-      document.getElementById('tituloDatos2').innerText = 'Uso'; // Modifica el título datos 2
+      document.getElementById('tituloDatos2').innerText = 'Partes y componentes'; // Modifica el título datos 2
       document.getElementById('tituloDatos2').classList.add('titulo-sec2'); // Agrega la clase 'titulo-sec-active'
 
+      //Funcion
+      document.getElementById('datos3').style.display = 'block'; // Muestra datos 2
+      document.getElementById('tituloDatos3').innerText = 'Funciones'; // Modifica el título datos 3
+      document.getElementById('tituloDatos3').classList.add('titulo-sec'); // Agrega la clase 'titulo-sec-active'
     });
   </script>
 
