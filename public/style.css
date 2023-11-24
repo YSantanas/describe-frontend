@@ -1,7 +1,7 @@
 body {
   background-color: rgb(254, 239, 250);
   color: blueviolet;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -164,8 +164,7 @@ nav a:hover {
 .contenedor-titulo {
   display: flex;
   align-items: center; /* Alinea los elementos hijos en el centro */
-  margin-top: 3%;
-  margin-bottom: 1%;
+  margin: 1rem 0; /* Agrega un poco de espacio en la parte superior e inferior */
 }
 
 .formaDos {
@@ -241,7 +240,6 @@ nav a:hover {
   padding-top: 2%;
   padding-bottom: 2%;
   text-align: center; /* Alinea el texto a la derecha */
-
 }
 
 .container-dia {
@@ -298,7 +296,7 @@ nav a:hover {
   padding: 0 20px; /* Agrega espacio en los lados para mejorar la legibilidad */
 }
 
-form {
+.form {
   display: flex;
   justify-content: center;
 
