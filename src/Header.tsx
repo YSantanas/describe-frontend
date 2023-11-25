@@ -1,13 +1,16 @@
-import logoDescribe from './assets/logoDescribe.png';
+import logoDescribe from "./assets/logoDescribe.png";
+
 
 const Header = () => {
   return (
     <header>
       <nav>
         <ul>
-          <li>
-            <img className="logo" src={logoDescribe} alt="Logo" />
-          </li>
+          <a href="/">
+            <li>
+              <img className="logo" src={logoDescribe} alt="Logo" />
+            </li>
+          </a>
 
           <li>
             <a href="./paginas/describeIng.html">

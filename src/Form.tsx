@@ -5,7 +5,34 @@ import { Formik } from 'formik';
 import { useContext } from 'react';
 import { useMutation } from 'react-query';
 
+import { useState, useEffect } from "react";
+
 const Form = () => {
+
+ //------------------->>>> cambio de idioma
+ const [formtitle, formTitle] = useState("Escribe tu palabra: ");
+ const [formtitle2, formTitle2] = useState("Descargar");
+ const [formtitle3, formTitle3] = useState("Enviar");
+ const [formtitle4, formTitle4] = useState("Término");
+
+ useEffect(() => {
+   const pathname = window.location.pathname;
+   if (pathname === "/paginas/describeIng.html") {
+    formTitle("Write your word: ");
+    formTitle2("Download");
+    formTitle3("Send");
+    formTitle4("Term");
+   } else {
+    formTitle("Escribe tu palabra: ");
+    formTitle2("Descargar");
+    formTitle3("Enviar");
+    formTitle4("Término");
+   }
+ }, [window.location.pathname]);
+
+ //------------------->>>> fin cambio de idioma
+
+
   const { setData, setIsLoading } = useContext(AppContext);
 
   const mutation = useMutation((text: string) => {
@@ -63,14 +90,15 @@ const Form = () => {
               <div className="contenedor-interior">
                 <div className="mb-3">
                   <label htmlFor="palabra" className="form-label">
-                    Escribe tu palabra:
+                  {formtitle}
+                    
                   </label>
                   <input
                     type="text"
                     className="form-control mb-2"
                     id="palabra"
                     name="palabra"
-                    placeholder="Término"
+                    placeholder={formtitle4}
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.palabra}
@@ -84,7 +112,7 @@ const Form = () => {
                       className="btn btn-modificado btn-outline-success my-4"
                       id="btnDescargar"
                     >
-                      Descargar
+                      {formtitle2}
                     </button>
                   </div>
                   <div className="col-6">
@@ -94,7 +122,7 @@ const Form = () => {
                       id="btnEnviar"
                       disabled={isSubmitting}
                     >
-                      Enviar
+                      {formtitle3}
                     </button>
                   </div>
                 </div>

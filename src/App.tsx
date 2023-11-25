@@ -1,9 +1,9 @@
-import { createContext, useState } from 'react';
-import Banner from './Banner';
-import Footer from './Footer';
-import Form from './Form';
-import Header from './Header';
-import ResultsList from './ResultsList';
+import { createContext, useState, useEffect } from "react";
+import Banner from "./Banner";
+import Footer from "./Footer";
+import Form from "./Form";
+import Header from "./Header";
+import ResultsList from "./ResultsList";
 
 interface IData {
   definiciones: [];
@@ -33,6 +33,32 @@ function App() {
   });
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
+  //cambio de idioma
+  const [title, setTitle] = useState("Definiciones");
+  const [title2, setTitle2] = useState("Componentes");
+  const [title3, setTitle3] = useState("Funciones");
+
+  useEffect(() => {
+    const pathname = window.location.pathname;
+    if (pathname === "/paginas/describeIng.html") {
+      setTitle("Definitions");
+    } else {
+      setTitle("Definiciones");
+    }
+    if (pathname === "/paginas/describeIng.html") {
+      setTitle2("Components");
+    } else {
+      setTitle2("Componentes");
+    }
+    if (pathname === "/paginas/describeIng.html") {
+      setTitle3("Funcions");
+    } else {
+      setTitle3("Funciones");
+    }
+  }, [window.location.pathname]);
+
+  //fin cambio de idioma
+
   return (
     <AppContext.Provider
       value={{
@@ -53,13 +79,13 @@ function App() {
           <h1>Cargando...</h1>
         ) : (
           <>
-            <ResultsList results={data.definiciones} title="Definiciones" />
+            <ResultsList results={data.definiciones} title={title} />
             <ResultsList
               results={data.componentes}
-              title="Componentes"
+              title={title2}
               className="titulo-sec2"
             />
-            <ResultsList results={data.funciones} title="Funciones" />
+            <ResultsList results={data.funciones} title={title3} />
           </>
         )}
       </main>
@@ -68,5 +94,4 @@ function App() {
     </AppContext.Provider>
   );
 }
-
 export default App;
