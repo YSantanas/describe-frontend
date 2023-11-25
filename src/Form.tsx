@@ -11,6 +11,7 @@ const Form = () => {
   const [formtitle2, formTitle2] = useState("Descargar");
   const [formtitle3, formTitle3] = useState("Enviar");
   const [formtitle4, formTitle4] = useState("Término");
+  const [nombreTXT, nombreTexto] = useState("buscar");
   const { setData, setIsLoading } = useContext(AppContext);
   const [descargarError, setDescargarError] = useState(false);
   const mutation = useMutation((text: string) => {
@@ -32,12 +33,14 @@ const Form = () => {
       formTitle2("Download");
       formTitle3("Send");
       formTitle4("Term");
+      nombreTexto("Search_Result");
     } else {
       formBus("buscar");
       formTitle("Escribe tu palabra: ");
       formTitle2("Descargar");
       formTitle3("Enviar");
       formTitle4("Término");
+      nombreTexto("Resultado_Busqueda");
     }
   }, [window.location.pathname]);
 
@@ -59,7 +62,7 @@ const Form = () => {
 
       const enlaceDescarga = document.createElement("a");
       enlaceDescarga.href = urlArchivo;
-      enlaceDescarga.download = "datos_guardados.txt";
+      enlaceDescarga.download = `${nombreTXT}.txt`;
       enlaceDescarga.click();
 
       URL.revokeObjectURL(urlArchivo);
