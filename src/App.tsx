@@ -34,6 +34,7 @@ function App() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   //cambio de idioma
+
   const [title, setTitle] = useState("Definiciones");
   const [title2, setTitle2] = useState("Componentes");
   const [title3, setTitle3] = useState("Funciones");
@@ -42,17 +43,11 @@ function App() {
     const pathname = window.location.pathname;
     if (pathname === "/paginas/describeIng.html") {
       setTitle("Definitions");
-    } else {
-      setTitle("Definiciones");
-    }
-    if (pathname === "/paginas/describeIng.html") {
       setTitle2("Components");
-    } else {
-      setTitle2("Componentes");
-    }
-    if (pathname === "/paginas/describeIng.html") {
       setTitle3("Funcions");
     } else {
+      setTitle("Definiciones");
+      setTitle2("Componentes");
       setTitle3("Funciones");
     }
   }, [window.location.pathname]);

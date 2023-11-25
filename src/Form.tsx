@@ -10,6 +10,7 @@ import { useState, useEffect } from "react";
 const Form = () => {
 
  //------------------->>>> cambio de idioma
+ const [formBuscar, formBus] = useState("buscar");
  const [formtitle, formTitle] = useState("Escribe tu palabra: ");
  const [formtitle2, formTitle2] = useState("Descargar");
  const [formtitle3, formTitle3] = useState("Enviar");
@@ -18,11 +19,13 @@ const Form = () => {
  useEffect(() => {
    const pathname = window.location.pathname;
    if (pathname === "/paginas/describeIng.html") {
+    formBus("buscarIng");
     formTitle("Write your word: ");
     formTitle2("Download");
     formTitle3("Send");
     formTitle4("Term");
    } else {
+    formBus("buscar");
     formTitle("Escribe tu palabra: ");
     formTitle2("Descargar");
     formTitle3("Enviar");
@@ -36,7 +39,7 @@ const Form = () => {
   const { setData, setIsLoading } = useContext(AppContext);
 
   const mutation = useMutation((text: string) => {
-    return fetch('http://127.0.0.1:5000/buscar', {
+    return fetch(`http://127.0.0.1:5000/${formBuscar}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
