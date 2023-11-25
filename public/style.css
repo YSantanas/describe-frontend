@@ -230,7 +230,7 @@ nav a:hover {
 }
 
 .imagen {
-  float: left; /* Coloca la imagen a la izquierda */
+  float: center; /* Coloca la imagen a la izquierda */
   margin-right: 5%; /* Agrega una pequeña separación a la derecha de la imagen */
   border-radius: 2%;
 }
